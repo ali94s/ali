@@ -61,6 +61,7 @@ int FindWithCount(int *a,int len)
 			count--;
 			if (count == 0)
 			{
+				//出现一个新的数字他的计数器就是1
 				key = a[i];
 				count = 1;
 			}
