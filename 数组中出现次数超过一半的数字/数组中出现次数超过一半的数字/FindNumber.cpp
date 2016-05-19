@@ -46,13 +46,36 @@ void MyQuickSort(int *a, int first, int last)
 }
 
 
-
+//利用数组的特点找到这个数
+int FindWithCount(int *a,int len)
+{
+	int key = a[0];
+	int count = 0;
+	int i = 0;
+	while (i<len)
+	{
+		if (a[i] == key)
+			count++;
+		else
+		{
+			count--;
+			if (count == 0)
+			{
+				key = a[i];
+				count = 1;
+			}
+		}
+		i++;
+	}
+	return key;
+}
 int main()
 {
 
 	int a[] = { 12, 32, 32, 54, 32, 32, 33, 32, 32, 4,55,43,23,32,32,32 };
 	//MyQuickSort(a, 0, 9);
-	cout << FindNumber(a, sizeof(a)/sizeof(a[0])) << endl;
+	//cout << FindNumber(a, sizeof(a)/sizeof(a[0])) << endl;
+	cout << FindWithCount(a, sizeof(a) / sizeof(a[0])) << endl;
 	system("pause");
 	return 0;
 }
