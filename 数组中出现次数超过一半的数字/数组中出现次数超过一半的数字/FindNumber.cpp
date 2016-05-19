@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 void MyQuickSort(int *a, int first, int last);
+//数组中一个数超过了一半的出现次数  找到这个数
 int FindNumber(int *a,int len)
 {
 	MyQuickSort(a, 0, len);
