@@ -29,7 +29,6 @@ int CountOne(int n)
 
 
 
-5
 int main()
 {
 	cout << CountOne(15) << endl;
